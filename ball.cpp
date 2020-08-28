@@ -25,17 +25,6 @@ int main()
     noecho();
     curs_set(0);
 
-    if (has_colors() == FALSE) {
-        endwin();
-        printf("Your terminal does not support color\n");
-        exit(1);
-    }
-
-    // Define color palette
-    use_default_colors();
-    start_color();
-    init_pair(1, COLOR_CYAN, -1);
-
     while (c != 1) {
         // Update
         ball.oldx = ball.x;
